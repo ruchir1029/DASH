@@ -1,0 +1,31 @@
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <title>Login Page</title>
+</head>
+<body>
+<section class="login-ctn">
+    <div
+        class="login">
+        <h1>Login</h1>
+        <form action="/login" method="post">
+            <% if (messages.error) { %>
+                <span style="color: red;">
+                    <%- messages.error %>
+                </span>
+                <% } %>
+                    <div>
+                        <label for="username">Username:</label>
+                        <input type="text" id="name" name="username" required>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    </div>
+                    <button type="submit">Login</button>
+                    <button><a href="/register">Go to Register</a></button>
+        </form>
+    </div>
+</section>
+</body>
